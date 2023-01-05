@@ -30,6 +30,7 @@ M.setup = function ()
 		severity_sort = true,
 		float = {
 			focusable = true,
+      update_in_insert = false,
 			style = "minimal",
 			border = "rounded",
 			source = "always",
