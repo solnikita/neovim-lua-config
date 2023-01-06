@@ -48,6 +48,8 @@ return packer.startup(function(use)
   use "kyazdani42/nvim-tree.lua"
   use "kyazdani42/nvim-web-devicons"
   use "windwp/nvim-autopairs"
+  use "numToStr/Comment.nvim"
+  use "JoosepAlviste/nvim-ts-context-commentstring"
 
   -- Colorscheme
   use "Mofiqul/dracula.nvim"
