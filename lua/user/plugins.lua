@@ -47,6 +47,7 @@ return packer.startup(function(use)
   use "nvim-lualine/lualine.nvim"
   use "kyazdani42/nvim-tree.lua"
   use "kyazdani42/nvim-web-devicons"
+  use "windwp/nvim-autopairs"
 
   -- Colorscheme
   use "Mofiqul/dracula.nvim"
@@ -71,7 +72,22 @@ return packer.startup(function(use)
   use "RRethy/vim-illuminate"
 
   -- Treesitter
-  use "nvim-treesitter/nvim-treesitter"
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  }
+
+  -- Telescope
+  use "nvim-telescope/telescope.nvim"
+  use {
+    'sudormrfbin/cheatsheet.nvim',
+
+    requires = {
+      {'nvim-telescope/telescope.nvim'},
+      {'nvim-lua/popup.nvim'},
+      {'nvim-lua/plenary.nvim'},
+    }
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

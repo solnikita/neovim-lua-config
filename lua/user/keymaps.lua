@@ -36,10 +36,6 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
--- Insert --
--- Press jk fast to enter
-keymap("i", "jk", "<ESC>", opts)
-
 -- Visual --
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
@@ -69,3 +65,10 @@ keymap("n", "<leader>e", ":NvimTreeFocus<cr>", opts)
 keymap("n", "<leader>w", ":w<cr>", opts)
 keymap("n", "<leader>q", ":q<cr>", opts)
 keymap("n", "<leader>Q", ":q!<cr>", opts)
+-- Telescope
+keymap("n", "<leader>tt", ":Telescope<cr>", opts)
+keymap("n", "<leader>tg", ":Telescope live_grep<cr>", opts)
+keymap("n", "<leader>tr", ":Telescope registers<cr>", opts)
+keymap("n", "<leader>tb", ":Telescope git_branches<cr>", opts)
+keymap("n", "<leader>tc", ":Cheatsheet<cr>", opts)
+keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
