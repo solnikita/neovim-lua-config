@@ -50,6 +50,9 @@ return packer.startup(function(use)
   use "windwp/nvim-autopairs"
   use "numToStr/Comment.nvim"
   use "JoosepAlviste/nvim-ts-context-commentstring"
+  use 'lewis6991/impatient.nvim'
+  use "zbirenbaum/copilot.lua"
+  use "lewis6991/gitsigns.nvim"
 
   -- Colorscheme
   use "Mofiqul/dracula.nvim"
