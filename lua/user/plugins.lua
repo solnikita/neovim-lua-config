@@ -53,6 +53,7 @@ return packer.startup(function(use)
   use 'lewis6991/impatient.nvim'
   use "zbirenbaum/copilot.lua"
   use "lewis6991/gitsigns.nvim"
+  use "akinsho/toggleterm.nvim"
 
   -- Colorscheme
   use "Mofiqul/dracula.nvim"
