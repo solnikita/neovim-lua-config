@@ -56,6 +56,7 @@ return packer.startup(function(use)
   use "akinsho/toggleterm.nvim"
   use "xiyaowong/nvim-transparent"
   use "ggandor/lightspeed.nvim"
+  use "goolord/alpha-nvim"
 
   -- Colorscheme
   use "Mofiqul/dracula.nvim"

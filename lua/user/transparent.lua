@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 transparent.setup {
---   enable = true,
---   extra_groups = { "NvimTreeNormal", "NvimTreeStatuslineNc" },
+  enable = true,
+  extra_groups = { "NvimTreeNormal", "NvimTreeStatuslineNc" },
 }
 -- vim.g.transparent_enabled = true
