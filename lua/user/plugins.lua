@@ -55,6 +55,7 @@ return packer.startup(function(use)
   use "lewis6991/gitsigns.nvim"
   use "akinsho/toggleterm.nvim"
   use "xiyaowong/nvim-transparent"
+  use "ggandor/lightspeed.nvim"
 
   -- Colorscheme
   use "Mofiqul/dracula.nvim"
