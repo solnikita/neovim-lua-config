@@ -1,1 +1,1 @@
-# nvim_config
+# My personal neovim Lua config
