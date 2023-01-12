@@ -19,4 +19,3 @@ projections.setup {
 
 require('telescope').load_extension('projections')
 
-vim.keymap.set("n", "<leader>tp", function() vim.cmd("Telescope projections") end)

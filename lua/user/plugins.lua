@@ -57,6 +57,7 @@ return packer.startup(function(use)
   use "xiyaowong/nvim-transparent"
   use "ggandor/lightspeed.nvim"
   use "goolord/alpha-nvim"
+  use "folke/which-key.nvim"
 
   -- Colorscheme
   use "Mofiqul/dracula.nvim"
@@ -79,12 +80,14 @@ return packer.startup(function(use)
   use "williamboman/mason-lspconfig.nvim"
   use "jose-elias-alvarez/null-ls.nvim"
   use "RRethy/vim-illuminate"
+  use "glepnir/lspsaga.nvim"
 
   -- Treesitter
   use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
+  use "windwp/nvim-ts-autotag"
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
