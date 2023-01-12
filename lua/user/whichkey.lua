@@ -162,6 +162,7 @@ local mappings = {
       "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
       "Workspace Symbols",
     },
+    o = { "<cmd>Lspsaga outline<CR>", "Saga outline" },
   },
   ["<leader>s"] = {
     name = "Search",
