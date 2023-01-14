@@ -4,7 +4,7 @@ if not status_ok then
 end
 local keymap = vim.keymap.set
 
-saga.init_lsp_saga()
+saga.setup({})
 
 -- Only jump to error
 keymap("n", "[E", function()
