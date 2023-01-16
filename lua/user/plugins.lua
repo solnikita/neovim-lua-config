@@ -61,6 +61,7 @@ return packer.startup(function(use)
 
   -- Colorscheme
   use "Mofiqul/dracula.nvim"
+  use "olimorris/onedarkpro.nvim"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
