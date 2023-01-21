@@ -58,6 +58,7 @@ return packer.startup(function(use)
   use "ggandor/lightspeed.nvim"
   use "goolord/alpha-nvim"
   use "folke/which-key.nvim"
+  use "dstein64/vim-startuptime"
 
   -- Colorscheme
   use "Mofiqul/dracula.nvim"
