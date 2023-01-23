@@ -164,6 +164,10 @@ local mappings = {
     },
     o = { "<cmd>Lspsaga outline<CR>", "Saga outline" },
   },
+  ['<leader>k'] = {
+    name = "My functions",
+    t = { '<cmd>lua change_word_to_tag()<cr>', 'Change word to tag' },
+  },
   ["<leader>s"] = {
     name = "Search",
     b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
