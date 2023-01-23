@@ -59,7 +59,19 @@ return packer.startup(function(use)
   use "goolord/alpha-nvim"
   use "folke/which-key.nvim"
   use "dstein64/vim-startuptime"
-
+  use({
+    "jackMort/ChatGPT.nvim",
+      config = function()
+        require("chatgpt").setup({
+          -- optional configuration
+        })
+      end,
+      requires = {
+        "MunifTanjim/nui.nvim",
+        "nvim-lua/plenary.nvim",
+        "nvim-telescope/telescope.nvim"
+      }
+  })
   -- Colorscheme
   use "Mofiqul/dracula.nvim"
   use "olimorris/onedarkpro.nvim"
