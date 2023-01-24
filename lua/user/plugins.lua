@@ -72,6 +72,9 @@ return packer.startup(function(use)
         "nvim-telescope/telescope.nvim"
       }
   })
+  use "echasnovski/mini.animate"
+
+
   -- Colorscheme
   use "Mofiqul/dracula.nvim"
   use "olimorris/onedarkpro.nvim"
