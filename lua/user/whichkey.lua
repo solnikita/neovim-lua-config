@@ -178,8 +178,8 @@ local mappings = {
     R = { "<cmd>Telescope registers<cr>", "Registers" },
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     C = { "<cmd>Telescope commands<cr>", "Commands" },
-    g = { "<cmd>Telescope live_grep<cr>", "Commands" },
-    s = { "<cmd>Telescope<cr>", "Commands" },
+    g = { "<cmd>Telescope live_grep<cr>", "Live grep" },
+    s = { "<cmd>Telescope<cr>", "Telescope all" },
   },
 
   ["<leader>t"] = {
@@ -192,6 +192,10 @@ local mappings = {
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     t = { "<cmd>ToggleTerm size=50 direction=vertical<cr>", "Vertical" },
   },
+  ["<leader>y"] = {
+    name = "Plugins",
+    c = { "<cmd>ChatGPT<cr>", "ChatGPT" },
+  }
 }
 
 which_key.setup(setup)

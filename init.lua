@@ -25,5 +25,5 @@ else
   require "user.projections"
   require "user.lspsaga"
   require "user.whichkey"
-  require('user.mini-animate')
+  require "user.mini-animate"
 end
