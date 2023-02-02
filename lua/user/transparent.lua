@@ -5,6 +5,15 @@ end
 
 transparent.setup {
   enable = true,
-  extra_groups = { "NvimTreeNormal", "NvimTreeStatuslineNc" },
+  extra_groups = { 
+    "NvimTreeNormal", 
+    "NvimTreeStatuslineNc",
+    "BufferLineTabClose",
+    "BufferlineBufferSelected",
+    "BufferLineFill",
+    "BufferLineBackground",
+    "BufferLineSeparator",
+    "BufferLineIndicatorSelected",
+  },
 }
 

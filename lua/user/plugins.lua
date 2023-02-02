@@ -73,6 +73,8 @@ return packer.startup(function(use)
       }
   })
   use "echasnovski/mini.animate"
+  use {'akinsho/bufferline.nvim', tag = "v3.*"}
+  use "renerocksai/telekasten.nvim"
 
 
   -- Colorscheme
@@ -86,6 +88,7 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-cmdline" -- cmdline completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
+  use "zbirenbaum/copilot-cmp"
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine

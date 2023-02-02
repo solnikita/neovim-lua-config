@@ -8,7 +8,13 @@ if not snip_status_ok then
   return
 end
 
+local copilot_cmp_ok, copilot_cmp = pcall(require, "copilot_cmp")
+if not copilot_cmp_ok then
+  return
+end
+
 require("luasnip/loaders/from_vscode").lazy_load()
+copilot_cmp.setup()
 
 local check_backspace = function()
   local col = vim.fn.col "." - 1
@@ -109,6 +115,7 @@ cmp.setup {
     end,
   },
   sources = {
+    { name = "copilot" },
     { name = "nvim_lsp" },
     { name = "luasnip" },
     { name = "buffer" },

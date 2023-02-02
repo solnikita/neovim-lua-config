@@ -4,7 +4,11 @@ if not status_ok then
 end
 local keymap = vim.keymap.set
 
-saga.setup({})
+saga.setup({
+  symbol_in_winbar = {
+    enable = false,
+  }
+})
 
 -- Only jump to error
 keymap("n", "[E", function()

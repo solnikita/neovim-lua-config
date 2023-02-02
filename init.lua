@@ -7,7 +7,6 @@ else
   require "user.keymaps"
   require "user.plugins"
   require "user.colorscheme"
-  require "user.cmp"
   require "user.lsp"
   require "user.lualine"
   require "user.treesitter"
@@ -26,4 +25,7 @@ else
   require "user.lspsaga"
   require "user.whichkey"
   require "user.mini-animate"
+  require "user.bufferline"
+  require "user.telekasten"
+  require "user.cmp"
 end
