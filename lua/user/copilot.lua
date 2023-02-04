@@ -18,7 +18,7 @@ copilot.setup({
   suggestion = {
     enabled = false,
     auto_trigger = true,
-    debounce = 75,
+    debounce = 150,
     keymap = {
       accept = "<TAB>",
       accept_word = false,

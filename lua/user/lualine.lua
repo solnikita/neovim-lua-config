@@ -81,11 +81,10 @@ lualine.setup({
 	},
 	sections = {
 		lualine_a = { branch, diagnostics },
-		lualine_b = { mode },
-		lualine_c = {},
-		-- lualine_x = { "encoding", "fileformat", "filetype" },
-		lualine_x = { isUnsaved, diff, "encoding", filetype },
-		lualine_y = { location },
+		lualine_b = { "filename" },
+		lualine_c = { "searchcount" },
+		lualine_x = { isUnsaved, diff, "encoding" },
+		lualine_y = { filetype },
 		lualine_z = { progress },
 	},
 	inactive_sections = {

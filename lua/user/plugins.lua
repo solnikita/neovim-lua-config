@@ -75,7 +75,7 @@ return packer.startup(function(use)
   use "echasnovski/mini.animate"
   use {'akinsho/bufferline.nvim', tag = "v3.*"}
   use "renerocksai/telekasten.nvim"
-
+  use {"shortcuts/no-neck-pain.nvim", tag = "*" }
 
   -- Colorscheme
   use "Mofiqul/dracula.nvim"
