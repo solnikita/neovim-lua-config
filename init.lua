@@ -3,9 +3,9 @@ if vim.g.vscode then
   require "user.comment"
     -- VSCode extension
 else
+  require "user.plugins"
   require "user.options"
   require "user.keymaps"
-  require "user.plugins"
   require "user.colorscheme"
   require "user.lsp"
   require "user.lualine"
