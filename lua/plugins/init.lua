@@ -1,41 +1,34 @@
--- Auto install lazy nvim
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
-end
-vim.opt.rtp:prepend(lazypath)
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
--- Save inport lazy
-local status_ok, lazy = pcall(require, "lazy")
-if not status_ok then
-  return
-end
-
-return lazy.setup({
+return {
   "nvim-lua/popup.nvim",
   "nvim-lua/plenary.nvim",
-  "nvim-lualine/lualine.nvim",
-  "kyazdani42/nvim-tree.lua",
+  {
+    "nvim-lualine/lualine.nvim",
+    config = function()
+      require("plugins.configs.lualine")
+    end
+  },
+  {
+    "kyazdani42/nvim-tree.lua",
+    config = function()
+      require("plugins.configs.nvimtree")
+    end
+  },
   "kyazdani42/nvim-web-devicons",
   "windwp/nvim-autopairs",
   "numToStr/Comment.nvim",
   "JoosepAlviste/nvim-ts-context-commentstring",
-  'lewis6991/impatient.nvim',
+  "lewis6991/impatient.nvim",
   "zbirenbaum/copilot.lua",
   "lewis6991/gitsigns.nvim",
   "akinsho/toggleterm.nvim",
   "xiyaowong/nvim-transparent",
   "ggandor/lightspeed.nvim",
-  "goolord/alpha-nvim",
+  {
+    "goolord/alpha-nvim",
+    config = function()
+      require("plugins.configs.alpha")
+    end
+  },
   "folke/which-key.nvim",
   "dstein64/vim-startuptime",
   {
@@ -99,4 +92,4 @@ return lazy.setup({
     }
   },
   "gnikdroy/projections.nvim",
-})
+}

@@ -1,16 +1,9 @@
-if vim.g.vscode then
-  require "user.lightspeed"
-  require "user.comment"
-    -- VSCode extension
-else
-  require "user.plugins"
-  require "user.options"
-  require "user.keymaps"
-  require "user.colorscheme"
+require "user.lazy"
+require "user.options"
+require "user.keymaps"
+require "user.colorscheme"
   require "user.lsp"
-  require "user.lualine"
   require "user.treesitter"
-  require "user.nvim-tree"
   require "user.telescope"
   require "user.autopairs"
   require "user.comment"
@@ -20,12 +13,12 @@ else
   require "user.toggleterm"
   require "user.transparent"
   require "user.lightspeed"
-  require "user.alpha"
   require "user.projections"
   require "user.lspsaga"
   require "user.whichkey"
   require "user.mini-animate"
-  require "user.bufferline"
   require "user.telekasten"
   require "user.cmp"
-end
+
+require "plugins.configs.bufferline"
+
