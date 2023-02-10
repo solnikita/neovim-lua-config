@@ -15,7 +15,12 @@ return {
   },
   "kyazdani42/nvim-web-devicons",
   "windwp/nvim-autopairs",
-  "numToStr/Comment.nvim",
+  {
+    "numToStr/Comment.nvim",
+    config = function()
+      require("plugins.configs.comment")
+    end
+  },
   "JoosepAlviste/nvim-ts-context-commentstring",
   "lewis6991/impatient.nvim",
   "zbirenbaum/copilot.lua",
