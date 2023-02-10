@@ -99,15 +99,7 @@ local mappings = {
   ["gd"] = { "<cmd>Lspsaga peek_definition<CR>", "Go definition" },
   ["[e"] = { "<cmd>Lspsaga diagnostic_jump_prev<CR>", "Previous diagnostic" },
   ["]e"] = { "<cmd>Lspsaga diagnostic_jump_prev<CR>", "Next diagnostic" },
-
-  ["<leader>P"] = {
-    name = "Packer",
-    c = { "<cmd>PackerCompile<cr>", "Compile" },
-    i = { "<cmd>PackerInstall<cr>", "Install" },
-    s = { "<cmd>PackerSync<cr>", "Sync" },
-    S = { "<cmd>PackerStatus<cr>", "Status" },
-    u = { "<cmd>PackerUpdate<cr>", "Update" },
-  },
+  ["<leader>L"] = { "<cmd>Lazy <cr>", "Lazy" },
 
   ["<leader>g"] = {
     name = "Git",
@@ -154,7 +146,8 @@ local mappings = {
       "<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>",
       "Prev Diagnostic",
     },
-    l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
+    c = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
+    l = { "<cmd>Lspsaga show_line_diagnostics<cr>", "CodeLens Action" },
     q = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "Quickfix" },
     r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
     s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
