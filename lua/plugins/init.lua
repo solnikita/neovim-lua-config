@@ -40,7 +40,12 @@ return {
       require("plugins.configs.gitsigns")
     end
   },
-  "akinsho/toggleterm.nvim",
+  {
+    "akinsho/toggleterm.nvim",
+    config = function()
+      require("plugins.configs.toggleterm")
+    end
+  },
   "xiyaowong/nvim-transparent",
   {
     "ggandor/lightspeed.nvim",
