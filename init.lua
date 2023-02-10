@@ -6,7 +6,6 @@ require "user.colorscheme"
   require "user.treesitter"
   require "impatient"
   require "user.lspsaga"
-  require "user.whichkey"
   require "user.cmp"
 
 require "plugins.configs.bufferline"

@@ -64,7 +64,12 @@ return {
       require("plugins.configs.alpha")
     end
   },
-  "folke/which-key.nvim",
+  {
+    "folke/which-key.nvim",
+    config = function()
+      require("plugins.configs.whichkey")
+    end
+  },
   "dstein64/vim-startuptime",
   {
     "jackMort/ChatGPT.nvim",
