@@ -36,12 +36,14 @@ return {
   },
   {
     "lewis6991/gitsigns.nvim",
+    event = "BufRead",
     config = function()
       require("plugins.configs.gitsigns")
     end
   },
   {
     "akinsho/toggleterm.nvim",
+    event = "VeryLazy",
     config = function()
       require("plugins.configs.toggleterm")
     end
@@ -54,12 +56,15 @@ return {
   },
   {
     "ggandor/lightspeed.nvim",
+    event = "BufRead",
     config = function()
       require("lightspeed").setup({})
     end
   },
   {
     "goolord/alpha-nvim",
+    lazy = false,
+    priority = 1000,
     config = function()
       require("plugins.configs.alpha")
     end
@@ -70,7 +75,10 @@ return {
       require("plugins.configs.whichkey")
     end
   },
-  "dstein64/vim-startuptime",
+  {
+    "dstein64/vim-startuptime",
+    cmd = "StartupTime",
+  },
   {
     "jackMort/ChatGPT.nvim",
       config = function()
