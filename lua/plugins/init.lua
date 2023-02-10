@@ -34,7 +34,12 @@ return {
       require("plugins.configs.copilot")
     end
   },
-  "lewis6991/gitsigns.nvim",
+  {
+    "lewis6991/gitsigns.nvim",
+    config = function()
+      require("plugins.configs.gitsigns")
+    end
+  },
   "akinsho/toggleterm.nvim",
   "xiyaowong/nvim-transparent",
   "ggandor/lightspeed.nvim",
