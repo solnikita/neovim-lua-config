@@ -69,7 +69,12 @@ return {
         "nvim-telescope/telescope.nvim"
       }
   },
-  "echasnovski/mini.animate",
+  {
+    "echasnovski/mini.animate",
+    config = function()
+      require("plugins.configs.mini-animate")
+    end
+  },
   {'akinsho/bufferline.nvim'},
   "renerocksai/telekasten.nvim",
   {"shortcuts/no-neck-pain.nvim"},

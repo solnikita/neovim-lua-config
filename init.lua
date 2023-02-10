@@ -11,7 +11,6 @@ require "user.colorscheme"
   require "user.projections"
   require "user.lspsaga"
   require "user.whichkey"
-  require "user.mini-animate"
   require "user.telekasten"
   require "user.cmp"
 
