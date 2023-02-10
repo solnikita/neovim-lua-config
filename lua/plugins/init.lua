@@ -1,4 +1,5 @@
 return {
+  "lewis6991/impatient.nvim",
   "nvim-lua/popup.nvim",
   "nvim-lua/plenary.nvim",
   {
@@ -27,7 +28,6 @@ return {
     end
   },
   "JoosepAlviste/nvim-ts-context-commentstring",
-  "lewis6991/impatient.nvim",
   {
     "zbirenbaum/copilot.lua",
     config = function()
@@ -111,7 +111,12 @@ return {
   "windwp/nvim-ts-autotag",
 
   -- Telescope
-  "nvim-telescope/telescope.nvim",
+  {
+    "nvim-telescope/telescope.nvim",
+    config = function()
+      require("plugins.configs.telescope")
+    end
+  },
   {
     'sudormrfbin/cheatsheet.nvim',
 
