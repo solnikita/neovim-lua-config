@@ -42,7 +42,12 @@ return {
   },
   "akinsho/toggleterm.nvim",
   "xiyaowong/nvim-transparent",
-  "ggandor/lightspeed.nvim",
+  {
+    "ggandor/lightspeed.nvim",
+    config = function()
+      require("lightspeed").setup({})
+    end
+  },
   {
     "goolord/alpha-nvim",
     config = function()
