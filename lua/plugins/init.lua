@@ -121,5 +121,10 @@ return {
       {'nvim-lua/plenary.nvim'},
     }
   },
-  "gnikdroy/projections.nvim",
+  {
+    "gnikdroy/projections.nvim",
+    config = function()
+      require("plugins.configs.projections")
+    end
+  },
 }
