@@ -46,7 +46,12 @@ return {
       require("plugins.configs.toggleterm")
     end
   },
-  "xiyaowong/nvim-transparent",
+  {
+    "xiyaowong/nvim-transparent",
+    config = function()
+      require("plugins.configs.transparent")
+    end
+  },
   {
     "ggandor/lightspeed.nvim",
     config = function()
