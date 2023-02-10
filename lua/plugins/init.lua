@@ -14,7 +14,12 @@ return {
     end
   },
   "kyazdani42/nvim-web-devicons",
-  "windwp/nvim-autopairs",
+  {
+    "windwp/nvim-autopairs",
+    config = function()
+      require("plugins.configs.autopairs")
+    end
+  },
   {
     "numToStr/Comment.nvim",
     config = function()
