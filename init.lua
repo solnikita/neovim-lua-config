@@ -10,7 +10,6 @@ require "user.colorscheme"
   require "user.transparent"
   require "user.lspsaga"
   require "user.whichkey"
-  require "user.telekasten"
   require "user.cmp"
 
 require "plugins.configs.bufferline"
