@@ -202,10 +202,10 @@ local buttons = {
 		dashboard.button(
 			"p",
 			" " .. " Find project",
-			":lua require('telescope').extensions.projects.projects()<CR>"
+			":Telescope projections<CR>"
 		),
-		dashboard.button("f", "  Find file", ":FzfLua files <CR>"),
-		dashboard.button("F", "  Find text", ":FzfLua live_grep <CR>"),
+		dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
+		dashboard.button("F", "  Find text", ":Telescope live_grep <CR>"),
 		dashboard.button("n", "  New file", ":ene <BAR> startinsert <CR>"),
 		dashboard.button("c", "  Configuration", ":e ~/.config/nvim/init.lua <CR>"),
 		dashboard.button("u", "  Update plugins", ":Lazy sync<CR>"),

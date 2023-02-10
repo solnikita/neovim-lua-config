@@ -99,5 +99,4 @@ return lazy.setup({
     }
   },
   "gnikdroy/projections.nvim",
-
 })
