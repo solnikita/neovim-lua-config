@@ -28,7 +28,12 @@ return {
   },
   "JoosepAlviste/nvim-ts-context-commentstring",
   "lewis6991/impatient.nvim",
-  "zbirenbaum/copilot.lua",
+  {
+    "zbirenbaum/copilot.lua",
+    config = function()
+      require("plugins.configs.copilot")
+    end
+  },
   "lewis6991/gitsigns.nvim",
   "akinsho/toggleterm.nvim",
   "xiyaowong/nvim-transparent",
