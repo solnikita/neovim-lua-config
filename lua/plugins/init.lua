@@ -2,6 +2,10 @@ return {
   "lewis6991/impatient.nvim",
   "nvim-lua/popup.nvim",
   "nvim-lua/plenary.nvim",
+  "kyazdani42/nvim-web-devicons",
+  "JoosepAlviste/nvim-ts-context-commentstring",
+  'akinsho/bufferline.nvim',
+  "shortcuts/no-neck-pain.nvim",
   {
     "nvim-lualine/lualine.nvim",
     config = function()
@@ -14,7 +18,6 @@ return {
       require("plugins.configs.nvimtree")
     end
   },
-  "kyazdani42/nvim-web-devicons",
   {
     "windwp/nvim-autopairs",
     config = function()
@@ -27,7 +30,6 @@ return {
       require("plugins.configs.comment")
     end
   },
-  "JoosepAlviste/nvim-ts-context-commentstring",
   {
     "zbirenbaum/copilot.lua",
     config = function()
@@ -94,17 +96,14 @@ return {
   },
   {
     "echasnovski/mini.animate",
+    event = "BufRead",
     config = function()
       require("plugins.configs.mini-animate")
     end
   },
-  {'akinsho/bufferline.nvim'},
-  "renerocksai/telekasten.nvim",
-  {"shortcuts/no-neck-pain.nvim"},
 
   -- Colorscheme
   "Mofiqul/dracula.nvim",
-  "olimorris/onedarkpro.nvim",
 
   -- cmp plugins
   "hrsh7th/nvim-cmp", -- The completion plugin
@@ -124,13 +123,10 @@ return {
   "williamboman/mason.nvim",
   "williamboman/mason-lspconfig.nvim",
   "jose-elias-alvarez/null-ls.nvim",
-  "RRethy/vim-illuminate",
   "glepnir/lspsaga.nvim",
 
   -- Treesitter
-  {
-    "nvim-treesitter/nvim-treesitter",
-  },
+  "nvim-treesitter/nvim-treesitter",
   "windwp/nvim-ts-autotag",
 
   -- Telescope
@@ -142,7 +138,6 @@ return {
   },
   {
     'sudormrfbin/cheatsheet.nvim',
-
     dependencies = {
       {'nvim-telescope/telescope.nvim'},
       {'nvim-lua/popup.nvim'},
