@@ -154,22 +154,11 @@ local function mru(start, cwd, items_number, opts)
 	return {
 		type = "group",
 		val = tbl,
-		opts = {},
+		opts = {
+      hl = "Number",
+    },
 	}
 end
-
-local header = {
-	type = "text",
-	val = {
-		" ",
-		"    ███    ██ ██    ██ ██ ███    ███",
-		"    ████   ██ ██    ██ ██ ████  ████",
-		"    ██ ██  ██ ██    ██ ██ ██ ████ ██",
-		"    ██  ██ ██  ██  ██  ██ ██  ██  ██",
-		"    ██   ████   ████   ██ ██      ██",
-	},
-	opts = { position = "center" },
-}
 
 local section_mru = {
 	type = "group",
@@ -178,7 +167,7 @@ local section_mru = {
 			type = "text",
 			val = "Recent files",
 			opts = {
-				hl = "SpecialComment",
+				hl = "Number",
 				shrink_margin = false,
 				position = "center",
 			},
@@ -189,7 +178,7 @@ local section_mru = {
 			val = function()
 				return { mru(1, cdir, 9) }
 			end,
-			opts = { shrink_margin = false },
+			opts = { hl = "Number", shrink_margin = false },
 		},
 	},
 }
@@ -197,13 +186,9 @@ local section_mru = {
 local buttons = {
 	type = "group",
 	val = {
-		{ type = "text", val = "Quick links", opts = { hl = "SpecialComment", position = "center" } },
+		{ type = "text", val = "Quick links", opts = { hl = "Number", position = "center" } },
 		{ type = "padding", val = 1 },
-		dashboard.button(
-			"p",
-			" " .. " Find project",
-			":Telescope projections<CR>"
-		),
+		dashboard.button("p", " " .. " Find project", ":Telescope projections<CR>"),
 		dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
 		dashboard.button("F", "  Find text", ":Telescope live_grep <CR>"),
 		dashboard.button("n", "  New file", ":ene <BAR> startinsert <CR>"),
@@ -214,28 +199,9 @@ local buttons = {
 	position = "center",
 }
 
--- Foot must be a table so that its height is correctly measured
--- local num_plugins_loaded = #vim.fn.globpath(vim.fn.stdpath("data") .. "/site/pack/packer/start", "*", 0, 1)
-local stats = require("lazy").stats()
--- This ms is not working
-local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
-local footer = {
-	type = "text",
-	val = { "⚡ Neovim loaded " .. stats.count .. " plugins in " .. ms .. "ms" },
-	opts = {
-		position = "center",
-		hl = "Comment",
-	},
-}
-
 local opts = {
 	layout = {
-		{ type = "padding", val = 2 },
-		-- header,
-		-- { type = "padding", val = 3 },
-		-- greetHeading,
-		-- footer,
-		{ type = "padding", val = 2 },
+		{ type = "padding", val = 4 },
 		section_mru,
 		{ type = "padding", val = 2 },
 		buttons,
