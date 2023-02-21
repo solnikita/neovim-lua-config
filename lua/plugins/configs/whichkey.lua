@@ -156,6 +156,7 @@ local mappings = {
       "Workspace Symbols",
     },
     o = { "<cmd>Lspsaga outline<CR>", "Saga outline" },
+    t = { "<cmd>TroubleToggle<CR>", "Troubles" },
   },
   ['<leader>k'] = {
     name = "My functions",

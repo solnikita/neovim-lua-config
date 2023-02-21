@@ -64,6 +64,13 @@ return {
     end
   },
   {
+    "folke/trouble.nvim",
+    event = "BufRead",
+    config = function()
+      require("trouble").setup({})
+    end
+  },
+  {
     "goolord/alpha-nvim",
     lazy = false,
     priority = 1000,
@@ -83,16 +90,16 @@ return {
   },
   {
     "jackMort/ChatGPT.nvim",
-      config = function()
-        require("chatgpt").setup({
-          -- optional configuration
-        })
-      end,
-      dependencies = {
-        "MunifTanjim/nui.nvim",
-        "nvim-lua/plenary.nvim",
-        "nvim-telescope/telescope.nvim"
-      }
+    config = function()
+      require("chatgpt").setup({
+        -- optional configuration
+      })
+    end,
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim"
+    }
   },
   {
     "echasnovski/mini.animate",
@@ -139,9 +146,9 @@ return {
   {
     'sudormrfbin/cheatsheet.nvim',
     dependencies = {
-      {'nvim-telescope/telescope.nvim'},
-      {'nvim-lua/popup.nvim'},
-      {'nvim-lua/plenary.nvim'},
+      { 'nvim-telescope/telescope.nvim' },
+      { 'nvim-lua/popup.nvim' },
+      { 'nvim-lua/plenary.nvim' },
     }
   },
   {

@@ -40,6 +40,7 @@
   "projections.nvim": { "branch": "main", "commit": "008de87749e6baa402a2ce2f3ebc75e724b95da1" },
   "telescope.nvim": { "branch": "master", "commit": "a486ac3e8fb2198f3636da1927ed57a28836fbd8" },
   "toggleterm.nvim": { "branch": "main", "commit": "ecf9dacccbcf0d66d9aa9074fdbb5ed51575399a" },
+  "trouble.nvim": { "branch": "main", "commit": "3b754285635a66a93aeb15fa71a23417d8997217" },
   "vim-startuptime": { "branch": "master", "commit": "6580cf539c33a212f4f5542068a3b4dd2b3ad834" },
   "which-key.nvim": { "branch": "main", "commit": "5224c261825263f46f6771f1b644cae33cd06995" }
 }
