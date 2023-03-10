@@ -130,7 +130,12 @@ return {
   "williamboman/mason.nvim",
   "williamboman/mason-lspconfig.nvim",
   "jose-elias-alvarez/null-ls.nvim",
-  "glepnir/lspsaga.nvim",
+  {
+    "glepnir/lspsaga.nvim",
+    config = function()
+      require("plugins.configs.lspsaga")
+    end
+  },
 
   -- Treesitter
   "nvim-treesitter/nvim-treesitter",
