@@ -43,6 +43,7 @@ return {
       require("plugins.configs.gitsigns")
     end
   },
+  {"tpope/vim-fugitive"},
   {
     "akinsho/toggleterm.nvim",
     event = "VeryLazy",
