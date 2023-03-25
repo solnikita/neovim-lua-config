@@ -44,6 +44,7 @@ return {
     end
   },
   {"tpope/vim-fugitive"},
+  {"TimUntersberger/neogit"},
   {
     "akinsho/toggleterm.nvim",
     event = "VeryLazy",
