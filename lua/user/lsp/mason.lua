@@ -5,7 +5,7 @@ local servers = {
 	"tsserver",
 	"jsonls",
   "rust_analyzer",
-  "vls",
+  "volar",
 }
 
 require("mason").setup()
