@@ -43,8 +43,8 @@ return {
       require("plugins.configs.gitsigns")
     end
   },
-  {"tpope/vim-fugitive"},
-  {"TimUntersberger/neogit"},
+  { "tpope/vim-fugitive" },
+  { "TimUntersberger/neogit" },
   {
     "akinsho/toggleterm.nvim",
     event = "VeryLazy",
@@ -115,16 +115,16 @@ return {
   "Mofiqul/dracula.nvim",
 
   -- cmp plugins
-  "hrsh7th/nvim-cmp", -- The completion plugin
-  "hrsh7th/cmp-buffer", -- buffer completions
-  "hrsh7th/cmp-path", -- path completions
-  "hrsh7th/cmp-cmdline", -- cmdline completions
+  "hrsh7th/nvim-cmp",         -- The completion plugin
+  "hrsh7th/cmp-buffer",       -- buffer completions
+  "hrsh7th/cmp-path",         -- path completions
+  "hrsh7th/cmp-cmdline",      -- cmdline completions
   "saadparwaiz1/cmp_luasnip", -- snippet completions
   "hrsh7th/cmp-nvim-lsp",
   "zbirenbaum/copilot-cmp",
 
   -- snippets
-  "L3MON4D3/LuaSnip", --snippet engine
+  "L3MON4D3/LuaSnip",             --snippet engine
   "rafamadriz/friendly-snippets", -- a bunch of snippets to use
 
   -- LSP
@@ -134,8 +134,19 @@ return {
   "jose-elias-alvarez/null-ls.nvim",
   {
     "glepnir/lspsaga.nvim",
+    dependencies = {
+      "neovim/nvim-lspconfig",
+      "SmiteshP/nvim-navic",
+      "MunifTanjim/nui.nvim",
+    },
     config = function()
       require("plugins.configs.lspsaga")
+    end
+  },
+  {
+    "SmiteshP/nvim-navbuddy",
+    config = function()
+      require("plugins.configs.navbuddy")
     end
   },
 
