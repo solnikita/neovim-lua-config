@@ -1,5 +1,5 @@
-local status_ok, projections = pcall(require, "projections")
-if not status_ok then
+local status_projections_ok, projections = pcall(require, "projections")
+if not status_projections_ok then
   return
 end
 
@@ -17,5 +17,5 @@ projections.setup {
   patterns = { ".git" },
 }
 
-require('telescope').load_extension('projections')
+telescope.load_extension('projections')
 
