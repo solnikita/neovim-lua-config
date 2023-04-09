@@ -13,4 +13,7 @@ mini_animate.setup({
   close = {
     enable = false,
   },
+  cursor = {
+    enable = false,
+  }
 })
