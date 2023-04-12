@@ -59,10 +59,10 @@ return {
     end
   },
   {
-    "ggandor/lightspeed.nvim",
+    "ggandor/leap.nvim",
     event = "BufRead",
     config = function()
-      require("lightspeed").setup({})
+      require("leap").add_default_mappings()
     end
   },
   {
