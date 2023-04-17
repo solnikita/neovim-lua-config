@@ -7,6 +7,10 @@ return {
   'akinsho/bufferline.nvim',
   "shortcuts/no-neck-pain.nvim",
   {
+    "nvim-telescope/telescope-symbols.nvim",
+    event = "VeryLazy",
+  },
+  {
     "nvim-lualine/lualine.nvim",
     config = function()
       require("plugins.configs.lualine")
