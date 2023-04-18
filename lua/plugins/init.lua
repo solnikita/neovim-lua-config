@@ -114,6 +114,13 @@ return {
       require("plugins.configs.mini-animate")
     end
   },
+  {
+    "nacro90/numb.nvim",
+    event = "BufRead",
+    config = function()
+      require("numb").setup()
+    end
+  },
 
   -- Colorscheme
   "Mofiqul/dracula.nvim",
