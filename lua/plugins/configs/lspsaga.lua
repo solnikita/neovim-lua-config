@@ -5,7 +5,7 @@ end
 
 lspsaga.setup({
   lightbulb = {
-    enabled = false,
+    enable = false,
   },
   symbol_in_winbar = {
     enable = false,

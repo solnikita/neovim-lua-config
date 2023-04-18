@@ -156,7 +156,12 @@ return {
 
   -- Treesitter
   "nvim-treesitter/nvim-treesitter",
-  "windwp/nvim-ts-autotag",
+  {
+    "windwp/nvim-ts-autotag",
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end
+  },
 
   -- Telescope
   {
