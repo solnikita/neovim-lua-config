@@ -5,7 +5,6 @@ return {
   "kyazdani42/nvim-web-devicons",
   "JoosepAlviste/nvim-ts-context-commentstring",
   'akinsho/bufferline.nvim',
-  "shortcuts/no-neck-pain.nvim",
   {
     "nvim-telescope/telescope-symbols.nvim",
     event = "VeryLazy",
@@ -24,12 +23,14 @@ return {
   },
   {
     "windwp/nvim-autopairs",
+    event = "BufRead",
     config = function()
       require("plugins.configs.autopairs")
     end
   },
   {
     "numToStr/Comment.nvim",
+    event = "BufRead",
     config = function()
       require("plugins.configs.comment")
     end
@@ -47,14 +48,13 @@ return {
       require("plugins.configs.gitsigns")
     end
   },
-  { "tpope/vim-fugitive" },
-  { "TimUntersberger/neogit" },
   {
-    "akinsho/toggleterm.nvim",
-    event = "VeryLazy",
-    config = function()
-      require("plugins.configs.toggleterm")
-    end
+    "tpope/vim-fugitive",
+    event = "BufRead"
+  },
+  {
+    "TimUntersberger/neogit",
+    event = "BufRead",
   },
   {
     "xiyaowong/nvim-transparent",
@@ -179,6 +179,7 @@ return {
   },
   {
     'sudormrfbin/cheatsheet.nvim',
+    event = "VeryLazy",
     dependencies = {
       { 'nvim-telescope/telescope.nvim' },
       { 'nvim-lua/popup.nvim' },
@@ -187,6 +188,7 @@ return {
   },
   {
     "gnikdroy/projections.nvim",
+    event = "VeryLazy",
     config = function()
       require("plugins.configs.projections")
     end
