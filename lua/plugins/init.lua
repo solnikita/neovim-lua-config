@@ -41,6 +41,16 @@ return {
       require("plugins.configs.copilot")
     end
   },
+  -- {
+  --   'Exafunction/codeium.vim',
+  --   config = function()
+  --     -- Change '<C-g>' here to any keycode you like.
+  --     vim.keymap.set('i', '<C-g>', function() return vim.fn['codeium#Accept']() end, { expr = true })
+  --     vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
+  --     vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
+  --     vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
+  --   end
+  -- },
   {
     "lewis6991/gitsigns.nvim",
     event = "BufRead",
@@ -97,9 +107,7 @@ return {
   {
     "jackMort/ChatGPT.nvim",
     config = function()
-      require("chatgpt").setup({
-        -- optional configuration
-      })
+      require("plugins.configs.chatgpt")
     end,
     dependencies = {
       "MunifTanjim/nui.nvim",
@@ -168,6 +176,12 @@ return {
     config = function()
       require("nvim-ts-autotag").setup()
     end
+  },
+  {
+    'nmac427/guess-indent.nvim',
+    config = function()
+      require('guess-indent').setup {}
+    end,
   },
 
   -- Telescope
