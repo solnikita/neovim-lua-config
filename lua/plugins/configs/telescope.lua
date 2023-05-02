@@ -17,6 +17,7 @@ telescope.setup {
     color_devicons = true,
     use_less = true,
     borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
+    -- borderchars = { " ", " ", " ", " ", " ", " ", " ", " " },
     set_env = { ["COLORTERM"] = "truecolor" },
     file_previewer = require("telescope.previewers").vim_buffer_cat.new,
     grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
@@ -34,8 +35,8 @@ telescope.setup {
       vertical = {
         mirror = false,
       },
-      width = 0.95,
-      height = 0.95,
+      width = 0.99,
+      height = 0.99,
       preview_cutoff = 120,
     },
 
