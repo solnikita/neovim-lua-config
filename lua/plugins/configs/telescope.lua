@@ -34,8 +34,8 @@ telescope.setup {
       vertical = {
         mirror = false,
       },
-      width = 0.87,
-      height = 0.80,
+      width = 0.95,
+      height = 0.95,
       preview_cutoff = 120,
     },
 
@@ -105,6 +105,15 @@ telescope.setup {
     },
   },
   pickers = {
+    buffers = {
+      initial_mode = "normal",
+    },
+    lsp_definitions = {
+      initial_mode = "normal",
+    },
+    git_status = {
+      initial_mode = "normal",
+    }
     -- Default configuration for builtin pickers goes here:
     -- picker_name = {
     --   picker_config_key = value,

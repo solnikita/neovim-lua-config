@@ -4,7 +4,7 @@ return {
   "nvim-lua/plenary.nvim",
   "kyazdani42/nvim-web-devicons",
   "JoosepAlviste/nvim-ts-context-commentstring",
-  'akinsho/bufferline.nvim',
+  "akinsho/bufferline.nvim",
   {
     "nvim-telescope/telescope-symbols.nvim",
     event = "VeryLazy",
@@ -26,6 +26,13 @@ return {
     event = "BufRead",
     config = function()
       require("plugins.configs.autopairs")
+    end
+  },
+  {
+    "echasnovski/mini.ai",
+    event = "VeryLazy",
+    config = function()
+      require('mini.ai').setup()
     end
   },
   {
@@ -131,7 +138,14 @@ return {
   },
 
   -- Colorscheme
-  "Mofiqul/dracula.nvim",
+  {
+    "Mofiqul/dracula.nvim",
+    config = function()
+      require("dracula").setup({
+        transparent_bg = true,
+      })
+    end
+  },
 
   -- cmp plugins
   "hrsh7th/nvim-cmp",         -- The completion plugin

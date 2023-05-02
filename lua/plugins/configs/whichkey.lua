@@ -96,7 +96,7 @@ local mappings = {
   ["<leader>F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
   ["<leader>p"] = { "<cmd>Telescope projections<cr>", "Projects" },
   ["gh"] = { "<cmd>Lspsaga lsp_finder<CR>", "Lsp finder" },
-  ["gd"] = { "<cmd>Lspsaga peek_definition<CR>", "Go definition" },
+  ["gd"] = { "<cmd>Telescope lsp_definitions<CR>", "Go definition" },
 
   ["<leader>L"] = { "<cmd>Lazy <cr>", "Lazy" },
 
@@ -162,7 +162,7 @@ local mappings = {
     R = { "<cmd>Telescope registers<cr>", "Registers" },
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     C = { "<cmd>Telescope commands<cr>", "Commands" },
-    s = { "<cmd>Telescope live_grep theme=ivy<cr>", "Live grep" },
+    s = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Buffer fuzzy find" },
     t = { "<cmd>Telescope<cr>", "Telescope all" },
   },
   ["<leader>t"] = {
