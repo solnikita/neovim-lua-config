@@ -3,9 +3,9 @@ if not status_ok then
 	return
 end
 local auto_theme_custom = require('lualine.themes.dracula')
-auto_theme_custom.normal.c.bg = 'none'
-auto_theme_custom.visual.c.bg = 'none'
-auto_theme_custom.insert.c.bg = 'none'
+auto_theme_custom.normal.c.bg = '#282A36'
+auto_theme_custom.visual.c.bg = '#282A36'
+auto_theme_custom.insert.c.bg = '#282A36'
 
 local hide_in_width = function()
 	return vim.fn.winwidth(0) > 80
@@ -25,7 +25,7 @@ local diff = {
 	"diff",
 	colored = false,
 	symbols = { added = " ", modified = " ", removed = " " }, -- changes diff symbols
-  cond = hide_in_width
+	cond = hide_in_width
 }
 
 local filetype = {
@@ -42,32 +42,32 @@ local branch = {
 
 local progress = function()
 	local total_lines = vim.fn.line("$")
-  return total_lines
+	return total_lines
 end
 
 local isUnsaved = function()
-  if vim.bo.modified then
-    return ""
-  else
-    return ""
-  end
+	if vim.bo.modified then
+		return ""
+	else
+		return ""
+	end
 end
 
 lualine.setup({
 	options = {
 		icons_enabled = true,
 		theme = auto_theme_custom,
-		component_separators = { left = '', right = ''},
-    section_separators = { left = '', right = ''},
+		component_separators = { left = '', right = '' },
+		section_separators = { left = '', right = '' },
 		disabled_filetypes = { "alpha", "dashboard", "NvimTree", "Outline" },
 		always_divide_middle = true,
-    globalstatus = true,
+		globalstatus = true,
 	},
 	sections = {
 		lualine_a = { branch, diagnostics },
 		lualine_b = { "filename" },
 		lualine_c = { "searchcount" },
-		lualine_x = { isUnsaved, diff, "encoding" },
+		lualine_x = { isUnsaved, diff },
 		lualine_y = { filetype },
 		lualine_z = { progress },
 	},
