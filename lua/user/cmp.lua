@@ -48,10 +48,9 @@ local kind_icons = {
   Event = "",
   Operator = "",
   TypeParameter = "",
-  LSP = "ﯦ",
-  Copilot = "ﯦ",
+  LSP = "󰅱",
+  Copilot = "",
 }
--- find more here: https://www.nerdfonts.com/cheat-sheet
 
 cmp.setup {
   snippet = {
