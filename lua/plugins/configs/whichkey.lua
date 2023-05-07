@@ -79,10 +79,6 @@ local opts = {
 }
 
 local mappings = {
-  ["<leader>b"] = {
-    "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false, sort_lastused = true, ignore_current_buffer = true })<cr>",
-    "Buffers",
-  },
   ["<leader>e"] = { "<cmd>NvimTreeFocus<cr>", "Explorer" },
   ["<leader>E"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
   ["<leader>w"] = { "<cmd>w<CR>", "Save" },
@@ -94,7 +90,10 @@ local mappings = {
     "Find files",
   },
   ["<leader>F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
-  ["<leader>p"] = { "<cmd>Telescope projections<cr>", "Projects" },
+  ["<leader>p"] = {
+    "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false, sort_lastused = true, ignore_current_buffer = true })<cr>",
+    "Buffers",
+  },
   ["gh"] = { "<cmd>Lspsaga lsp_finder<CR>", "Lsp finder" },
   ["gd"] = { "<cmd>Telescope lsp_definitions<CR>", "Go definition" },
 

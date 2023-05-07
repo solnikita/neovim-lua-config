@@ -44,20 +44,11 @@ return {
   },
   {
     "zbirenbaum/copilot.lua",
+    event = "BufRead",
     config = function()
       require("plugins.configs.copilot")
     end
   },
-  -- {
-  --   'Exafunction/codeium.vim',
-  --   config = function()
-  --     -- Change '<C-g>' here to any keycode you like.
-  --     vim.keymap.set('i', '<C-g>', function() return vim.fn['codeium#Accept']() end, { expr = true })
-  --     vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
-  --     vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
-  --     vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
-  --   end
-  -- },
   {
     "lewis6991/gitsigns.nvim",
     event = "BufRead",
@@ -113,6 +104,7 @@ return {
   },
   {
     "jackMort/ChatGPT.nvim",
+    event = "VeryLazy",
     config = function()
       require("plugins.configs.chatgpt")
     end,
@@ -148,17 +140,41 @@ return {
   },
 
   -- cmp plugins
-  "hrsh7th/nvim-cmp",         -- The completion plugin
-  "hrsh7th/cmp-buffer",       -- buffer completions
-  "hrsh7th/cmp-path",         -- path completions
-  "hrsh7th/cmp-cmdline",      -- cmdline completions
-  "saadparwaiz1/cmp_luasnip", -- snippet completions
-  "hrsh7th/cmp-nvim-lsp",
-  "zbirenbaum/copilot-cmp",
+  {
+    "hrsh7th/nvim-cmp",
+    event = "BufRead"
+  },
+  {
+    -- buffer completions
+    "hrsh7th/cmp-buffer",
+    event = "BufRead"
+  },
+  {
+    "hrsh7th/cmp-cmdline",
+    event = "BufRead"
+  },
+  {
+    "saadparwaiz1/cmp_luasnip",
+    event = "BufRead"
+  },
+  {
+    "hrsh7th/cmp-nvim-lsp",
+    event = "BufRead"
+  },
+  {
+    "zbirenbaum/copilot-cmp",
+    event = "BufRead"
+  },
 
   -- snippets
-  "L3MON4D3/LuaSnip",             --snippet engine
-  "rafamadriz/friendly-snippets", -- a bunch of snippets to use
+  {
+    "L3MON4D3/LuaSnip",
+    event = "BufRead"
+  },
+  {
+    "rafamadriz/friendly-snippets",
+    event = "BufRead"
+  },
 
   -- LSP
   "neovim/nvim-lspconfig",
@@ -178,6 +194,7 @@ return {
   },
   {
     "SmiteshP/nvim-navbuddy",
+    event = "BufRead",
     config = function()
       require("plugins.configs.navbuddy")
     end
@@ -187,12 +204,14 @@ return {
   "nvim-treesitter/nvim-treesitter",
   {
     "windwp/nvim-ts-autotag",
+    event = "BufRead",
     config = function()
       require("nvim-ts-autotag").setup()
     end
   },
   {
     'nmac427/guess-indent.nvim',
+    event = "BufRead",
     config = function()
       require('guess-indent').setup {}
     end,
@@ -213,12 +232,5 @@ return {
       { 'nvim-lua/popup.nvim' },
       { 'nvim-lua/plenary.nvim' },
     }
-  },
-  {
-    "gnikdroy/projections.nvim",
-    event = "VeryLazy",
-    config = function()
-      require("plugins.configs.projections")
-    end
   },
 }
