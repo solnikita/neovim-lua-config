@@ -4,9 +4,6 @@ if not status_ok then
 end
 
 chatgpt.setup({
-  keymaps = {
-    submit = "<C-s>",
-  },
   yank_register = "+",
   edit_with_instructions = {
     diff = false,
