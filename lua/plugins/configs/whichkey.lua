@@ -147,6 +147,7 @@ local mappings = {
     },
     o = { "<cmd>Lspsaga outline<CR>", "Saga outline" },
     t = { "<cmd>TroubleToggle<CR>", "Troubles" },
+    z = { "<cmd>LspRestart<CR>", "LspRestart" },
   },
   ['<leader>k'] = {
     name = "-",
