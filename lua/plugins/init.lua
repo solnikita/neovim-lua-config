@@ -16,9 +16,9 @@ return {
     end
   },
   {
-    "kyazdani42/nvim-tree.lua",
+    "nvim-neo-tree/neo-tree.nvim",
     config = function()
-      require("plugins.configs.nvimtree")
+      require("plugins.configs.neotree")
     end
   },
   {

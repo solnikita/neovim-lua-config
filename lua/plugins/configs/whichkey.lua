@@ -79,8 +79,8 @@ local opts = {
 }
 
 local mappings = {
-  ["<leader>e"] = { "<cmd>NvimTreeFocus<cr>", "Explorer" },
-  ["<leader>E"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
+  ["<leader>e"] = { "<cmd>NeoTreeFocus<cr>", "Explorer" },
+  ["<leader>E"] = { "<cmd>NeoTreeFocusToggle<cr>", "Explorer" },
   ["<leader>w"] = { "<cmd>w<CR>", "Save" },
   ["<leader>q"] = { "<cmd>qa<CR>", "Quit" },
   ["<leader>c"] = { "<cmd>bdelete!<CR>", "Close Buffer" },
