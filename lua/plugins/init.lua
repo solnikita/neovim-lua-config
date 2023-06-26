@@ -142,28 +142,22 @@ return {
   -- cmp plugins
   {
     "hrsh7th/nvim-cmp",
-    event = "BufRead"
   },
   {
     -- buffer completions
     "hrsh7th/cmp-buffer",
-    event = "BufRead"
   },
   {
     "hrsh7th/cmp-cmdline",
-    event = "BufRead"
   },
   {
     "saadparwaiz1/cmp_luasnip",
-    event = "BufRead"
   },
   {
     "hrsh7th/cmp-nvim-lsp",
-    event = "BufRead"
   },
   {
     "zbirenbaum/copilot-cmp",
-    event = "BufRead"
   },
 
   -- snippets
@@ -214,6 +208,12 @@ return {
     event = "BufRead",
     config = function()
       require('guess-indent').setup {}
+    end,
+  },
+  {
+    'norcalli/nvim-colorizer.lua',
+    config = function()
+      require('colorizer').setup()
     end,
   },
 
