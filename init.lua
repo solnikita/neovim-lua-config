@@ -1,12 +1,9 @@
 vim.cmd "set termguicolors"
 
-require "user.lazy"
-require "user.options"
-require "user.keymaps"
-require "user.colorscheme"
-require "user.lsp"
-require "impatient"
-require "user.treesitter"
-require "user.cmp"
+require "core.lazy"
+require "core.options"
+require "core.keymaps"
+require "lsp"
 
-require "plugins.configs.bufferline"
+require "user.colorscheme"
+require "impatient"
