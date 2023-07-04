@@ -96,9 +96,7 @@ local mappings = {
   },
   ["gh"] = { "<cmd>Lspsaga lsp_finder<CR>", "Lsp finder" },
   ["gd"] = { "<cmd>Telescope lsp_definitions<CR>", "Go definition" },
-
   ["<leader>L"] = { "<cmd>Lazy <cr>", "Lazy" },
-
   ["<leader>g"] = {
     name = "Git",
     g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
