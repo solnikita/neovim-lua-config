@@ -4,7 +4,7 @@ return {
 		event = "VeryLazy",
 		opts = {
 			plugins = {
-				marks = true, -- shows a list of your marks on ' and `
+				marks = true,  -- shows a list of your marks on ' and `
 				registers = true, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
 				spelling = {
 					enabled = true, -- enabling this will show WhichKey when pressing z= to select spelling suggestions
@@ -15,9 +15,9 @@ return {
 					motions = true, -- adds help for motions
 					text_objects = true, -- help for text objects triggered after entering an operator
 					windows = true, -- default bindings on <c-w>
-					nav = true, -- misc bindings to work with windows
-					z = true, -- bindings for folds, spelling and others prefixed with z
-					g = true, -- bindings for prefixed with g
+					nav = true,     -- misc bindings to work with windows
+					z = true,       -- bindings for folds, spelling and others prefixed with z
+					g = true,       -- bindings for prefixed with g
 				},
 			},
 			icons = {
@@ -26,21 +26,21 @@ return {
 				group = " ", -- symbol prepended to a group
 			},
 			window = {
-				border = "rounded", -- none, single, double, shadow
-				position = "bottom", -- bottom, top
+				border = "rounded",   -- none, single, double, shadow
+				position = "bottom",  -- bottom, top
 				margin = { 1, 0, 1, 0 }, -- extra window margin [top, right, bottom, left]
 				padding = { 2, 2, 2, 2 }, -- extra window padding [top, right, bottom, left]
 				winblend = 0,
 			},
 			layout = {
-				height = { min = 4, max = 25 }, -- min and max height of the columns
-				width = { min = 20, max = 50 }, -- min and max width of the columns
-				spacing = 3, -- spacing between columns
-				align = "left", -- align columns left, center or right
+				height = { min = 4, max = 25 },                                          -- min and max height of the columns
+				width = { min = 20, max = 50 },                                          -- min and max width of the columns
+				spacing = 3,                                                             -- spacing between columns
+				align = "left",                                                          -- align columns left, center or right
 			},
 			hidden = { "<silent>", "<cmd>", "<Cmd>", "<CR>", "call", "lua", "^:", "^ " }, -- hide mapping boilerplate
-			show_help = true, -- show help message on the command line when the popup is visible
-			triggers = "auto", -- automatically setup triggers
+			show_help = true,                                                          -- show help message on the command line when the popup is visible
+			triggers = "auto",                                                         -- automatically setup triggers
 			triggers_blacklist = {
 				-- list of mode / prefixes that should never be hooked by WhichKey
 				-- this is mostly relevant for key maps that start with a native binding
@@ -61,14 +61,13 @@ return {
 				["<leader><tab>"] = { name = "+tabs" },
 				["<leader>b"] = { name = "+buffer" },
 				["<leader>c"] = { name = "+code" },
-				["<leader>f"] = { name = "+file/find" },
 				["<leader>g"] = { name = "+git" },
 				["<leader>gh"] = { name = "+hunks" },
 				["<leader>s"] = { name = "+search" },
 				["<leader>u"] = { name = "+ui" },
 				["<leader>x"] = { name = "+diagnostics/quickfix" },
 				["<leader>h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
-				["<leader>ff"] = {
+				["<leader>f"] = {
 					"<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
 					"Find files",
 				},
@@ -119,9 +118,9 @@ return {
 		"akinsho/bufferline.nvim",
 		event = "VeryLazy",
 		keys = {
-			{ "<leader>bp", "<Cmd>BufferLineTogglePin<CR>", desc = "Toggle pin" },
+			{ "<leader>bp", "<Cmd>BufferLineTogglePin<CR>",            desc = "Toggle pin" },
 			{ "<leader>bP", "<Cmd>BufferLineGroupClose ungrouped<CR>", desc = "Delete non-pinned buffers" },
-			{ "<leader>bc", "<Cmd>bdelete!<CR>", desc = "Delete current buffer" },
+			{ "<leader>bc", "<Cmd>bdelete!<CR>",                       desc = "Delete current buffer" },
 		},
 		opts = {
 			options = {
@@ -140,7 +139,7 @@ return {
 				diagnostics = false, -- | "nvim_lsp" | "coc",
 				diagnostics_update_in_insert = false,
 				offsets = {
-					{ filetype = "vista", text = "Tags", padding = 0 },
+					{ filetype = "vista",     text = "Tags",     padding = 0 },
 					{ filetype = "nvim-tree", text = "Explorer", padding = 0 },
 				},
 				show_buffer_icons = true,
