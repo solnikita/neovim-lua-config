@@ -79,7 +79,7 @@ local opts = {
 }
 
 local mappings = {
-  ["<leader>e"] = { "<cmd>NeoTreeFocus<cr>", "Explorer" },
+  ["<leader>e"] = { "<cmd>:Neo-tree position=current<cr>", "Explorer" },
   ["<leader>E"] = { "<cmd>NeoTreeFocusToggle<cr>", "Explorer" },
   ["<leader>w"] = { "<cmd>w<CR>", "Save" },
   ["<leader>q"] = { "<cmd>qa<CR>", "Quit" },
