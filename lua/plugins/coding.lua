@@ -14,13 +14,13 @@ return {
       require("plugins.configs.autopairs")
     end
   },
-  {
-    "zbirenbaum/copilot.lua",
-    event = "BufRead",
-    config = function()
-      require("plugins.configs.copilot")
-    end
-  },
+  -- {
+  --   "zbirenbaum/copilot.lua",
+  --   event = "BufRead",
+  --   config = function()
+  --     require("plugins.configs.copilot")
+  --   end
+  -- },
   {
     "ggandor/leap.nvim",
     event = "BufRead",
