@@ -1,9 +1,9 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    dependencies = {
-      "JoosepAlviste/nvim-ts-context-commentstring"
-    },
+    -- dependencies = {
+    --   "JoosepAlviste/nvim-ts-context-commentstring"
+    -- },
     config = function()
       require("plugins.configs.treesitter")
     end

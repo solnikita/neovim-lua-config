@@ -13,4 +13,11 @@ configs.setup({
 	context_commentstring = {
 		enable = true,
 	},
+	incremental_selection = {
+		enable = true,
+		keymaps = {
+			node_incremental = "x",
+			node_decremental = "X",
+		}
+	}
 })
