@@ -9,6 +9,8 @@ local servers = {
 }
 
 require("mason").setup()
+require('java').setup()
+require('lspconfig').jdtls.setup({})
 require("mason-lspconfig").setup({
 	ensure_installed = servers,
 	automatic_installation = true,

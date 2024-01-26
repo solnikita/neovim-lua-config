@@ -7,4 +7,5 @@ return {
   { import = "plugins.git" },
   { import = "plugins.telescope" },
   { import = "plugins.lsp" },
+  { import = "plugins.java" },
 }
